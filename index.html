@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="es">
+
+    <title>MIeL - Materias Interactivas en L&iacute;nea</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/w3.css?2023.1.0" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/miel-theme.css?2023.1.0" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/miel-template.css?2023.1.0" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/miel-modulos.css?2023.1.0" />
+    <link rel="stylesheet" href="" id="mielTheme" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/prism/prism.default.css?2023.1.0" />
+    <link rel="stylesheet" type="text/css" href="https://miel.unlam.edu.ar/vista/css/miel-home.css?2023.1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body class="w3-light-grey">
+
+    <header class="w3-top">
+        <div class="w3-container">
+            <img src="https://miel.unlam.edu.ar/vista/imagenes/home/logo-unlam-40.png" class="w3-margin-right"
+                alt="logo unlam" />
+            <img src="https://miel.unlam.edu.ar/vista/imagenes/home/logo-miel-40-largo.png" class="w3-hide-small"
+                alt="logo miel" />
+            <img src="https://miel.unlam.edu.ar/vista/imagenes/home/logo-miel-40.png"
+                class="w3-hide-medium w3-hide-large" alt="logo miel" />
+        </div>
+    </header>
+
+    <section id="login" style="background-image: url('https://miel.unlam.edu.ar/vista/imagenes/home/foto-home-1.jpg')">
+        <div class="w3-container w3-padding-16">
+            <div id="card-home" class="w3-container w3-theme w3-card-4 w3-right w3-padding-16" style="width:400px;">
+                <h1 style="margin-top: 70px">
+                    Acceso a la plataforma MIeL </h1>
+                <div class="w3-container w3-white w3-padding-bottom" style="width:100%; padding: 5px 24px;">
+                    <div id="card-content-login">
+                        <form id="formLogin" action="" method="">
+                            <p>
+                                <label for="usuario">Usuario:</label>
+                                <input type="text" id="usuario" name="usuario" class="w3-input" maxlength="30" />
+                                <span class="input-bar"></span>
+                            </p>
+                            <p>
+                                <label for="clave">Contrase&ntilde;a:</label>
+                                <input type="password" id="clave" name="clave" class="w3-input" maxlength="30" />
+                                <span class="input-bar"></span>
+                            </p>
+                            <div class="w3-section">
+                                <span id="mensajeOkLogin" class="w3-text-green w3-block w3-hide"></span>
+                                <span id="mensajeErrorLogin" class="w3-text-red w3-block w3-hide"></span>
+                                <a href="./primera-pagina-interna.html" id="btnLogin"
+                                    class="w3-blue w3-btn-block w3-margin-top">
+                                    INGRESAR
+                                </a>
+                                <a href="javascript:void(0)" id="btnOlvideClave"
+                                    class="w3-transparent w3-block w3-margin-top w3-center w3-text-blue">
+                                    Olvid&eacute; mi contrase&ntilde;a
+                                </a>
+                                <hr />
+                                <a href="https://mielingreso.unlam.edu.ar/" class="w3-indigo w3-btn-block">CAMBIAR A
+                                    MIeL INGRESANTES</a>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div id="card-content-aviso-recuperar-clave" style="display: none;">
+                        <p><strong>Olvid&eacute; mi contrase&ntilde;a</strong></p>
+                        <p>Si usted es ALUMNO/A, deber&aacute; recuperar su contrase&ntilde;a a trav&eacute;s del
+                            sistema de Intraconsulta.</p>
+                        <p>Si usted es DOCENTE, podr&aacute; recuperar su contrase&ntilde;a por este medio si tiene un
+                            usuario activo en MIeL y una cuenta de email cargada.</p>
+                        <div class="w3-row-padding w3-section">
+                            <div class="w3-col m6 mobile-padding-0">
+                                <a href="https://alumno2.unlam.edu.ar/" target="_blank"
+                                    class="w3-blue w3-btn-block w3-margin-top">Soy alumno/a</a>
+                            </div>
+                            <div class="w3-col m6 mobile-padding-0">
+                                <a href="javascript:void(0)" class="btnContinuar w3-blue w3-btn-block w3-margin-top">Soy
+                                    docente</a>
+                            </div>
+                            <div class="w3-col w3-padding-0">
+                                <a href="javascript:void(0)"
+                                    class="btnVolver w3-light-grey w3-btn-block w3-margin-top">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="card-content-recuperar-clave-usuario" style="display: none;">
+                        <form id="formRecuperarClave"
+                            action="https://miel.unlam.edu.ar/principal/event/buscarUsuarioRecuperarClaveAjax/"
+                            method="post">
+                            <p><strong>Olvid&eacute; mi contrase&ntilde;a</strong></p>
+                            <p>
+                                <label for="usuarioRecuperar">Ingrese su DNI o usuario:</label>
+                                <input type="text" id="usuarioRecuperar" name="usuarioRecuperar" class="w3-input"
+                                    maxlength="30" />
+                                <span class="input-bar"></span>
+                            </p>
+                            <span id="mensajeErrorRecuperarClave" class="w3-text-red w3-block w3-hide"></span>
+                            <div class="w3-row-padding w3-section">
+                                <div class="w3-col m6 mobile-padding-0">
+                                    <a href="javascript:void(0)"
+                                        class="btnVolver w3-light-grey w3-btn-block w3-margin-top">Volver</a>
+                                </div>
+                                <div class="w3-col m6 mobile-padding-0">
+                                    <a href="javascript:void(0)"
+                                        class="btnContinuar w3-blue w3-btn-block w3-margin-top">Continuar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="card-content-recuperar-clave-email" style="display: none;">
+                        <form id="formRecuperarClaveEmail"
+                            action="https://miel.unlam.edu.ar/principal/event/enviarEmailRecuperarClaveAjax/"
+                            method="post">
+                            <p><strong>Olvid&eacute; mi contrase&ntilde;a</strong></p>
+                            <p>
+                                Le enviaremos una enlace a la cuenta <strong id="emailOculto"></strong> para que pueda
+                                restablecer su contrase&ntilde;a.
+                                Por favor, ingrese su email completo y haga click en &quot;Continuar.&quot;
+                            </p>
+                            <p>
+                                <input type="hidden" id="idUsuarioRecuperar" name="idUsuarioRecuperar" value="" />
+                                <label for="emailRecuperar">Email:</label>
+                                <input type="text" id="emailRecuperar" name="emailRecuperar" class="w3-input"
+                                    maxlength="80" autocomplete="off" />
+                                <span class="input-bar"></span>
+                            </p>
+                            <span id="mensajeErrorRecuperarClaveEmail" class="w3-text-red w3-block w3-hide"></span>
+                            <div class="w3-row-padding w3-section">
+                                <div class="w3-col m6 mobile-padding-0">
+                                    <a href="javascript:void(0)"
+                                        class="btnVolver w3-light-grey w3-btn-block w3-margin-top">Volver</a>
+                                </div>
+                                <div class="w3-col m6 mobile-padding-0">
+                                    <a href="javascript:void(0)"
+                                        class="btnContinuar w3-blue w3-btn-block w3-margin-top">Continuar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="card-content-recuperar-clave-mensaje" style="display: none;">
+                        <p><strong>Olvid&eacute; mi contrase&ntilde;a</strong></p>
+                        <p>Le enviamos por email un enlace para reestablecer su contrase&ntilde;a de MIeL. El enlace
+                            tendr&aacute; una validez de 2 horas.</p>
+                        <p>Si a&uacute;n no recibi&oacute; el correo, aguarde unos segundos, revise su bandeja de Spam o
+                            vuelva a intentar.</p>
+                        <div class="w3-section">
+                            <a href="javascript:void(0)" class="btnVolver w3-blue w3-btn-block">Volver</a>
+                        </div>
+                    </div>
+
+
+                    <div id="card-content-cambiar-clave" style="display: none;">
+                        <form id="formCambiarClave" action="https://miel.unlam.edu.ar/principal/event/cambiarClaveAjax/"
+                            method="post">
+                            <input type="hidden" id="codigoCambiarClave" name="codigoCambiarClave" value="" />
+
+                            <p><strong>Nueva contrase&ntilde;a</strong></p>
+                            <p>
+                                <label for="claveNueva">Ingrese su nueva contrase&ntilde;a:</label>
+                                <input type="password" id="claveNueva" name="claveNueva" class="w3-input" maxlength="30"
+                                    autocomplete="off" />
+                                <span class="input-bar"></span>
+                            </p>
+                            <p>
+                                <label for="claveNueva2">Repita la contrase&ntilde;a:</label>
+                                <input type="password" id="claveNueva2" name="claveNueva2" class="w3-input"
+                                    maxlength="30" autocomplete="off" />
+                                <span class="input-bar"></span>
+                            </p>
+                            <div class="w3-row-padding w3-section">
+                                <div class="w3-col m6 mobile-padding-0">
+                                    <a href="https://miel.unlam.edu.ar/principal/home/"
+                                        class="w3-light-grey w3-btn-block w3-margin-top">Cancelar</a>
+                                </div>
+                                <div class="w3-col m6 mobile-padding-0">
+                                    <a href="javascript:void(0)"
+                                        class="btnContinuar w3-blue w3-btn-block w3-margin-top">Confirmar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w3-dark-grey">
+
+        <div class="w3-row w3-container w3-padding-24">
+            <div class="w3-col l5 w3-container w3-dark-grey">
+                <h5 style="color: #cccccc">UNIVERSIDAD NACIONAL DE LA MATANZA</h5>
+                <p>
+                    <i class="material-icons w3-margin-right" aria-hidden="true">place</i>
+                    Florencio Varela 1903 (B1754JEC)
+                </p>
+                <p>
+                    <i class="material-icons w3-margin-right" aria-hidden="true">place</i>
+                    San Justo, Buenos Aires, Argentina
+                </p>
+                <p>
+                    <i class="material-icons w3-margin-right" aria-hidden="true">phone</i>
+                    <a href="tel:+5411 4480-8900">(+54 11) 4480-8900</a>
+                </p>
+                <p>
+                    <i class="material-icons w3-margin-right" aria-hidden="true">link</i>
+                    <a href="https://www.unlam.edu.ar">www.unlam.edu.ar</a>
+                </p>
+                <p class="redes">
+                    <a target="_blank" href="https://www.facebook.com/UnlamOficial">
+                        <img src="https://miel.unlam.edu.ar/vista/imagenes/home/icono-facebook-32.png"
+                            alt="facebook unlam" /></a>
+                    <a target="_blank" href="https://twitter.com/UnlamOficial">
+                        <img src="https://miel.unlam.edu.ar/vista/imagenes/home/icono-twitter-32.png"
+                            alt="twitter unlam" /></a>
+                    <a target="_blank" href="https://www.instagram.com/unlamoficial">
+                        <img src="https://miel.unlam.edu.ar/vista/imagenes/home/icono-instagram-32.png"
+                            alt="instagram unlam" /></a>
+                </p>
+            </div>
+
+            <div class="w3-col l4 m6 w3-container w3-dark-grey">
+                <h5 style="color: #cccccc">ENLACES INSTITUCIONALES</h5>
+                <p><a target="_blank" href="https://humanidades.unlam.edu.ar">Dpto. Humanidades y Ciencias Sociales</a>
+                </p>
+                <p><a target="_blank" href="https://derecho.unlam.edu.ar">Dpto. Derecho y Ciencia Pol&iacute;tica</a>
+                </p>
+                <p><a target="_blank" href="https://ingenieria.unlam.edu.ar">Dpto. Ingenier&iacute;a e Investigaciones
+                        Tecnol&oacute;gicas</a></p>
+                <p><a target="_blank" href="https://economicas.unlam.edu.ar">Dpto. Ciencias Econ&oacute;micas</a></p>
+                <p><a target="_blank" href="https://salud.unlam.edu.ar">Dpto. Ciencias de la Salud</a></p>
+            </div>
+
+            <div class="w3-col l3 m6 w3-container w3-dark-grey">
+                <h5 class="w3-hide-small">&nbsp;</h5>
+                <p><a target="_blank" href="https://posgrado.unlam.edu.ar">Escuela de Posgrado</a></p>
+                <p><a target="_blank" href="https://formacioncontinua.unlam.edu.ar">Escuela de Formaci&oacute;n
+                        Continua</a></p>
+                <p><a target="_blank" href="https://biblioteca.unlam.edu.ar">Biblioteca Leopoldo Marechal</a></p>
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding-32 w3-center w3-text-light-grey footer-miel">
+            MIeL - Materias Interactivas en L&iacute;nea - Departamento de Ingenier&iacute;a e Investigaciones
+            Tecnol&oacute;gicas - 2023<br />
+            <a href="mailto:miel@unlam.edu.ar">miel@unlam.edu.ar</a><br />
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

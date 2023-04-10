@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>MIeL - Materias Interactivas en L&iacute;nea</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/w3.css?2023.1.0" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/miel-theme.css?2023.1.0" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/miel-template.css?2023.1.0" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/miel-modulos.css?2023.1.0" />
+    <link rel="stylesheet" href="" id="mielTheme" />
+    <link rel="stylesheet" href="https://miel.unlam.edu.ar/vista/css/prism/prism.default.css?2023.1.0" />
+
+    <header id="encabezado" class="w3-top">
+
+        <div class="w3-row w3-white w3-padding-left w3-padding-right w3-padding-4">
+            <div class="w3-half logos">
+                <img src="https://miel.unlam.edu.ar/vista/imagenes/logo_unlam_34.png" id="logoUnlamHeader"
+                    class="w3-margin-right" alt="logo unlam" />
+                <img src="https://miel.unlam.edu.ar/vista/imagenes/logo_miel_34.png" id="logoMielHeader"
+                    alt="logo miel" />
+            </div>
+            <div class="w3-half w3-hide-small">
+
+                <a href="https://miel.unlam.edu.ar/perfil/datos/" class="w3-circle w3-right fotoPerfil"
+                    aria-label="Foto de perfil"
+                    style="background-image: url('https://miel.unlam.edu.ar/vista/imagenes/foto_perfil.jpg');"></a>
+
+                <div class="w3-right w3-right-align w3-margin-right nombreUsuario">
+                    PEREIRA VILCHES, AILEN ELIANA<br>
+
+                    <a href="https://miel.unlam.edu.ar/perfil/datos/" class="w3-small link"><strong>Mi
+                            perfil</strong></a> &middot;
+
+                    <a href="https://miel.unlam.edu.ar/ayuda/tutoriales/" class="w3-small link"
+                        id="btnAyuda"><strong>Ayuda</strong></a> &middot;
+
+                    <a href="https://miel.unlam.edu.ar/principal/event/logout/" class="w3-small link"><strong>Cerrar
+                            sesi&oacute;n</strong></a>
+                </div>
+            </div>
+        </div>
+
+        <ul id="menu-principal" class="w3-navbar w3-card-2 w3-theme">
+
+            <li class="w3-opennav w3-right w3-hide-medium w3-hide-large">
+                <a class="w3-hover-theme-d1 w3-padding-6 nav-icon"
+                    href="https://miel.unlam.edu.ar/principal/event/logout/" title="Cerrar sesi&oacute;n">
+                    <i class="material-icons" aria-hidden="true">exit_to_app</i>
+                </a>
+            </li>
+            <li class="w3-opennav w3-right w3-hide-medium w3-hide-large">
+                <a class="w3-hover-theme-d1 w3-padding-6 nav-icon" href="https://miel.unlam.edu.ar/ayuda/tutoriales/"
+                    title="Ayuda">
+                    <i class="material-icons" aria-hidden="true">help_outline</i>
+                </a>
+            </li>
+            <li class="w3-opennav w3-right w3-hide-medium w3-hide-large">
+                <a class="w3-hover-theme-d1 w3-padding-6 nav-icon" href="https://miel.unlam.edu.ar/perfil/datos/"
+                    title="Mi perfil">
+                    <i class="material-icons" aria-hidden="true">person</i>
+                </a>
+            </li>
+            <li class="w3-opennav w3-right">
+                <a class="w3-hover-theme-d1 w3-padding-6 nav-icon botonCambiarTema" href="javascript:void(0);"
+                    title="Modo oscuro">
+                    <i class="material-icons" aria-hidden="true">brightness_4</i>
+                </a>
+            </li>
+
+        </ul>
+    </header>
+
+    <nav id="menu-lateral" class="w3-sidenav w3-card-2 w3-collapse w3-white">
+
+        <div id="menu-lateral-inner">
+            <div id="menu-lateral-inner-inner" class="w3-text-white">
+
+                <a href="javascript:void(0)"
+                    class="w3-right w3-xlarge w3-padding-large w3-hide-large btnCerrarMenuLateral"
+                    title="Cerrar men&uacute; de navegaci&oacute;n">
+                    <i class="material-icons" aria-hidden="true">close</i>
+                </a>
+                <div>
+                    <div class="w3-container w3-padding-top">
+                        <h1>Menú</h1>
+                    </div>
+                    <a href="https://miel.unlam.edu.ar/calendario/calendario/" class="menu-opcion "><i
+                            class="material-icons w3-left w3-large w3-padding-right"
+                            aria-hidden="true">calendar_today</i>Calendario</a><a
+                        href="" class="menu-opcion "><i
+                            class="material-icons w3-left w3-large w3-padding-right"
+                            aria-hidden="true">drafts</i>Mensajes</a><a
+                        href="" class="menu-opcion "><i
+                            class="material-icons w3-left w3-large w3-padding-right"
+                            aria-hidden="true">notifications</i>Notificaciones</a>
+                    <div class="w3-container w3-padding-top">
+                </div>
+        </div>
+
+    </nav>
+
+    <main class="w3-main w3-container">
+        <div class="w3-clear">
+            <h1 class="w3-left">Materias activas</h1>
+            <div class="w3-right w3-mobile">
+                <a href="javascript:void(0)"
+                    class="w3-btn w3-light-grey w3-section w3-mobile w3-hide-small btnMostrarOcultas w3-hide">
+                    <i class="material-icons w3-large" aria-hidden="true">visibility</i> Ver materias ocultas
+                </a>
+                <a href="javascript:void(0)"
+                    class="w3-btn w3-light-grey w3-section w3-mobile w3-hide-small btnOcultarOcultas w3-hide">
+                    <i class="material-icons w3-large" aria-hidden="true">visibility_off</i> Ocultar materias ocultas
+                </a>
+                <a href="javascript:void(0)"
+                    class="w3-btn w3-light-gray w3-section w3-mobile w3-hide-small btnOrganizar">
+                    Organizar materias
+                </a>
+            </div>
+        </div>
+
+
+        <div class="curso-sortable">
+            <div class="w3-light-grey w3-row w3-hover-shadow w3-section materia-bloque  " data-id="20095103">
+                <div class="w3-col w3-mobile w3-padding materia-descripcion">
+
+                    <div class="w3-right botoneraDetalle">
+                        <a href="https://miel.unlam.edu.ar/principal/cursoDetalles/id/20095103"
+                            class="popup-curso tippy" style="z-index: 2" data-tippy-content="Ver detalle">
+                            <i class="material-icons w3-large" aria-hidden="true">more_vert</i>
+                        </a>
+                    </div>
+                    <div class="w3-right botoneraOrganizar w3-hide">
+                        <i class="material-icons w3-large tippy sort-handler" style="z-index: 2; cursor: grab"
+                            data-tippy-content="Arrastre para ordenar" aria-hidden="true">drag_handle</i>
+                        <br />
+                        <a href="javascript:void(0)" class="btnOcultarComision tippy" style="z-index: 2"
+                            data-tippy-content="Ocultar materia">
+                            <i class="material-icons w3-large" aria-hidden="true">close</i>
+                        </a>
+                    </div>
+
+                    <div class="w3-slarge materia-titulo">Diseño de Aplicaciones Web</div>
+                    <div class="w3-small">
+                        2629 -
+                        Com: 01-3966 -
+                        Alumno/a
+
+                    </div>
+                </div>
+                <div class="w3-rest w3-mobile materia-herramientas">
+                    <div class="w3-row">
+
+                        <a href="https://miel.unlam.edu.ar/contenido/archivos/comision/20095103"
+                            class="w3-col w3-padding-8 w3-center w3-hover-green w3-hover-text-white">
+                            <i class="material-icons w3-xxlarge" aria-hidden="true">import_contacts</i>
+                            <div class="w3-small">Contenidos</div>
+
+                        </a>
+
+                        <a href="https://miel.unlam.edu.ar/portafolio/practicas/comision/20095103"
+                            class="w3-col w3-padding-8 w3-center w3-hover-green w3-hover-text-white">
+                            <i class="material-icons w3-xxlarge" aria-hidden="true">description</i>
+                            <div class="w3-small">Evaluación y asistencias</div>
+
+                        </a>
+
+                        <a href="https://miel.unlam.edu.ar/mensajeria/entrada/comision/20095103"
+                            class="w3-col w3-padding-8 w3-center w3-hover-blue w3-hover-text-white">
+                            <i class="material-icons w3-xxlarge" aria-hidden="true">drafts</i>
+                            <div class="w3-small">Mensajes</div>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-light-grey w3-row w3-hover-shadow w3-section materia-bloque  " data-id="20095102">
+                <div class="w3-col w3-mobile w3-padding materia-descripcion">
+
+                    <div class="w3-right botoneraDetalle">
+                        <a href="https://miel.unlam.edu.ar/principal/cursoDetalles/id/20095102"
+                            class="popup-curso tippy" style="z-index: 2" data-tippy-content="Ver detalle">
+                            <i class="material-icons w3-large" aria-hidden="true">more_vert</i>
+                        </a>
+                    </div>
+                    <div class="w3-right botoneraOrganizar w3-hide">
+                        <i class="material-icons w3-large tippy sort-handler" style="z-index: 2; cursor: grab"
+                            data-tippy-content="Arrastre para ordenar" aria-hidden="true">drag_handle</i>
+                        <br />
+                        <a href="javascript:void(0)" class="btnOcultarComision tippy" style="z-index: 2"
+                            data-tippy-content="Ocultar materia">
+                            <i class="material-icons w3-large" aria-hidden="true">close</i>
+                        </a>
+                    </div>
+
+                    <div class="w3-slarge materia-titulo">Programación Web II</div>
+                    <div class="w3-small">
+                        2628 -
+                        Com: 01-1929 -
+                        Alumno/a
+
+                    </div>
+                </div>
+                <div class="w3-rest w3-mobile materia-herramientas">
+                    <div class="w3-row">
+
+                        <a href="https://miel.unlam.edu.ar/contenido/archivos/comision/20095102"
+                            class="w3-col w3-padding-8 w3-center w3-hover-green w3-hover-text-white">
+                            <i class="material-icons w3-xxlarge" aria-hidden="true">import_contacts</i>
+                            <div class="w3-small">Contenidos</div>
+
+                        </a>
+
+                        <a href="https://miel.unlam.edu.ar/portafolio/practicas/comision/20095102"
+                            class="w3-col w3-padding-8 w3-center w3-hover-green w3-hover-text-white">
+                            <i class="material-icons w3-xxlarge" aria-hidden="true">description</i>
+                            <div class="w3-small">Evaluación y asistencia</div>
+
+                        </a>
+
+                        <a href="https://miel.unlam.edu.ar/mensajeria/entrada/comision/20095102"
+                            class="w3-col w3-padding-8 w3-center w3-hover-blue w3-hover-text-white">
+                            <i class="material-icons w3-xxlarge" aria-hidden="true">drafts</i>
+                            <div class="w3-small">Mensajes</div>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <a href="javascript:void(0)"
+                class="w3-btn w3-light-grey w3-section w3-mobile w3-hide-medium w3-hide-large btnMostrarOcultas w3-hide">
+                <i class="material-icons w3-large" aria-hidden="true">visibility</i> Ver materias ocultas
+            </a>
+            <a href="javascript:void(0)"
+                class="w3-btn w3-light-grey w3-section w3-mobile w3-hide-medium w3-hide-large btnOcultarOcultas w3-hide">
+                <i class="material-icons w3-large" aria-hidden="true">visibility_off</i> Ocultar materias ocultas
+            </a>
+            <a href="javascript:void(0)"
+                class="w3-btn w3-light-gray w3-section w3-mobile w3-hide-medium w3-hide-large btnOrganizar">
+                Organizar materias
+            </a>
+
+            <footer class="w3-container w3-section w3-padding-16 w3-center w3-opacity">
+
+                <hr />
+                Departamento de Ingenier&iacute;a e Investigaciones Tecnol&oacute;gicas - Materias Interactivas en
+                L&iacute;nea - 2023
+            </footer>
+    </main>
+
+    </body>
+
+</html>
